@@ -1,0 +1,26 @@
+Archive member included to satisfy reference by file (symbol)
+
+Discarded input sections
+
+Linker script and memory map
+
+Address of section .text set to 0x140001000
+LOAD crt2.o
+LOAD main.o
+
+                0x0000000140001000                early_marker_before_header
+                0x0000000140000000                __image_base__ = 0x140000000
+                0x0000000000000400                . = SIZEOF_HEADERS
+
+.text           0x0000000140001000     0x2000
+ *(.text)
+ .text          0x0000000140001000      0x230 main.o
+                0x0000000140001230                alpha
+                0x0000000140001800                beta
+
+.data           0x0000000140004000     0x1000
+ *(.data)
+                0x0000000140004010                gamma
+
+.bss            0x0000000140009000      0x100
+                0x0000000140009000                outside_symbol

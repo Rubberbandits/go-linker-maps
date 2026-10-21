@@ -1,0 +1,44 @@
+---
+version: "2"
+
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  default: all
+  disable:
+    - exhaustruct
+    - exhaustruct_v5
+    - gomodguard
+    - gomodguard_v2
+    - varnamelen
+    - wsl
+    - wsl_v5
+  settings:
+    depguard:
+      rules:
+        all:
+          allow:
+            - $gostd
+            - github.com/Rubberbandits
+    exhaustive:
+      default-signifies-exhaustive: true
+    nolintlint:
+      require-explanation: true
+      require-specific: true
+  exclusions:
+    presets: []
+
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - gofumpt
+    - goimports
+    - golines
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+  uniq-by-line: false

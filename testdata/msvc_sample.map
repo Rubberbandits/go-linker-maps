@@ -1,0 +1,20 @@
+Sample
+
+ Timestamp is 5f5e1000 (Fri Sep 11 00:00:00 2020)
+
+ Preferred load address is 0000000140000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00002000H .text                  CODE
+ 0002:00000000 00001000H .data                  DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0001:00001230       ?alpha@@YAXXZ              0000000140001230 f   main.obj
+ 0001:00001800       beta_symbol                0000000140001800 f   main.obj
+ 0002:00000010       ??gamma@@3HA               0000000140004010     main.obj
+ 0002:00000020       delta                      0000000140004020     util.obj
+
+ entry point at        0001:00001800
+
+ Static symbols
